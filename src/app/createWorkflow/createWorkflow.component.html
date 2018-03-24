@@ -1,0 +1,117 @@
+<div class="main">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Create Workflow</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="createWorkflowForm">
+
+        <!-- <div class="row"> -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="form-group  col-sm-2">
+                        <label for="workflowName">WorkFlow Name: </label>
+                        <input type="text" id="workflowName" formControlName="workflowName"  placeholder="Enter Workflow Name" class="form-control">
+                    </div>
+
+                    <div class="form-group  col-sm-2">
+                        <label for="category">Category: </label>
+                        <input id="category" autocomplete="off" formControlName="category" placeholder="Enter Category"
+                            uib-typeahead="category for category in categories | filter: $viewValue | limitTo:15"
+                            class="form-control"  type="text">
+                    </div>
+
+                    <div class="form-group  col-sm-2">
+                        <label for="description">Description: </label>
+                        <input id="description" placeholder="Enter Description" formControlName="description" class="form-control desc-input"
+                            type="text">
+                    </div>
+                
+                
+                    <div class="form-inline col-md-6"> 
+                        <!-- <div class="row">  -->
+                        <button type="button" class="btn btn-warning"(click)="saveWorkflow()">Save</button>
+                        <button type="button" class="btn btn-primary"(click)="redraw()">Clear</button>
+                        <button type="submit" class="btn btn-primary">
+                            Back
+                        </button>
+                        <button *ngIf="isEditWorklfow" type="button" class="btn btn-primary">
+                            Workflow History
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Execute
+                        </button>
+                        <!-- <div class="col-md-8"></div> -->
+                        <div class="help-btn" style="float:right!important;"uib-popover-template="'popover-help.html'"
+                            popover-trigger="mouseenter" popover-placement="left">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+                        </div>
+                    <!-- </div>  -->
+                    </div> 
+                </div>
+						</div>
+						<!-- <div #test>Test</div> -->
+					
+						<!-- <div #test id="item_left" plumbItem class="item rect"></div>
+						<div #test id="item_right" plumbItem class="item rect"></div> -->
+        <!-- </div> -->
+				<div class="col-lg-9"> 
+					<div class="drop-container">
+
+							<div id="222" plumbItem class="item rect" 
+									 [ngStyle] ="{'background-color': '','left': 0 , 'top': 100}"									  
+									  >
+									<!-- <div plumb-connect class="connect-icon"></div> -->
+							</div>
+							<div id="3" plumbItem class="item rect" 
+							[ngStyle] ="{'background-color': '','left': 0 , 'top': 500}"	>
+							<div class="trash-icon"   align="center">&#10006;</div>
+							<div appHighlight class="connect-icon">asdfsd</div>
+                    <div class="info-icon">
+                 
+                    </div>
+						 <!-- <div plumb-connect class="connect-icon"></div> -->
+				 </div>
+					</div>
+			</div>
+			
+            <!-- <div class= "row">
+                <div class="col-md-12">
+                    <div class="row workflow-content">
+                        <div class="col-lg-4">
+
+                            <div class="form-group input-group col-md-3" style="float:left!important;">    
+                                <span class="input-group-addon"> <i class="fa fa-search"></i></span>       
+                                <input id="search" placeholder="Search Node" class="form-control" [(ngModel)]="search">
+                            </div>  
+                            <div class="navbar-default sidebar workflow-edit-sidebar">
+                                <div class="sidebar-nav navbar-collapse">
+
+                                    <script type="text/ng-template" id="nestedMenu">
+                                        <a style='{"padding-left": menu.padding}'
+                                        class="" data-toggle="collapse" >
+                                            <i class="fa fa-sitemap fa-fw"></i> <span class="fa arrow"></span></a>
+                                        <ul class="collapse menuitems nav">
+                                            <li>dfd
+                                            </li>
+                                        </ul>
+                                    </script>
+                                    <ul class="nav" id="side-menu">
+                                        <li>fdf
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <textarea rows="10" cols="60"> </textarea>
+                    </div>
+                    
+                </div> 
+            </div> -->
+        
+    </form>
+</div>

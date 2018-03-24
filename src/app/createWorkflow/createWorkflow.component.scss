@@ -1,0 +1,25 @@
+ li.active {
+         background: cornflowerBlue; 
+ 		 color: white;
+         display: block;
+         padding: 1px; 
+}
+
+.main{
+    margin-left: 1em;
+    margin-right: 1em; 
+}
+.page-header{
+    margin-bottom: 1em;
+}
+#diagramContainer {
+	padding: 20px;
+	width:80%; height: 200px;
+	border: 1px solid gray;
+}
+
+.item {
+	height:80px; width: 80px;
+	border: 1px solid blue;
+	float: left;
+}
